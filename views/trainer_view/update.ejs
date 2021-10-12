@@ -1,0 +1,33 @@
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <div class="container">
+                        <h1>Update Trainer</h1>
+                        <form action="/admin/edit_trainer" method="POST">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">ID</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                    value = '<%= id %>''
+                                    name = 'id'
+                                    readonly
+                                >
+                            </div>
+                            <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                value = '<%= username %>''
+                                name = 'username'
+                            >
+                            </div>
+                            <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1"
+                                value = '<%= password %>''
+                                name = 'password'
+                            >
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form> 
+                    </div> 
+                </div>
+                <!-- /.container-fluid -->

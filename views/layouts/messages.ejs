@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <% if(successFlashMessage.length > 0){ %>
+    <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <%=successFlashMessage%>
+    </div>
+  <% } %>
+  
+<% if(errorFlashMessage.length > 0){ %>
+  <div class="alert alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%=errorFlashMessage%>
+  </div>
+<% } %>
+</div>

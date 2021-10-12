@@ -1,0 +1,75 @@
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Begin Trainers section -->
+                    <div class="card shadow mb-4">
+                      <div class="card-header py-3">
+                          <h6 class="m-0 font-weight-bold text-primary">Trainers</h6>
+                      </div>
+                      <div class="card-body">
+                          <a href="/admin/create_trainer"><button class="btn btn-primary"><i class="fas fa-plus"></i> Create trainer</button></a>
+                          <div class="table-responsive">
+                              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                  <thead>
+                                      <tr>
+                                          <th>ID</th>
+                                          <th>Username</th>
+                                          <th>Password</th>
+                                          <th>Update</th>
+                                          <th>Delete</th>
+                                      </tr>
+                                  </thead>                             
+                                  <tbody>
+                                    <% trainers.forEach(function(trainer) { %>
+                                      <tr>
+                                          <th scope="row"><%= trainer.id %></th>
+                                          <td><%= trainer.username %></td>
+                                          <td><%= trainer.password %></td>
+                                          <td><a href="/admin/update_trainer/<%= trainer.id %>" class="btn btn-success"><i class="fas fa-cogs"></i> Update</a></td>
+                                          <td><a href="/admin/delete_trainer/<%= trainer.id %>" class="btn btn-danger"><i class="fas fa-trash"></i> Delete</a></td>
+                                        </tr>
+                                  <% }); %>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- End Trainers section -->
+
+                  <!-- Begin TrainingStaff section -->
+                  <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Training Staff</h6>
+                    </div>
+                    <div class="card-body">
+                        <a href="/admin/create_trainingStaff"><button class="btn btn-primary"><i class="fas fa-plus"></i> Create training staff</button></a>
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Username</th>
+                                        <th>Password</th>
+                                        <th>Update</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>                             
+                                <tbody>
+                                  <% trainingStaffs.forEach(function(trainingStaff) { %>
+                                    <tr>
+                                        <th scope="row"><%= trainingStaff.id %></th>
+                                        <td><%= trainingStaff.username %></td>
+                                        <td><%= trainingStaff.password %></td>
+                                        <td><a href="/admin/update_trainer/<%= trainingStaff.id %>" class="btn btn-success"><i class="fas fa-cogs"></i> Update</a></td>
+                                        <td><a href="/admin/delete_trainer/<%= trainingStaff.id %>" class="btn btn-danger"><i class="fas fa-trash"></i> Delete</a></td>
+                                      </tr>
+                                <% }); %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- End TrainingStaff section -->
+
+                </div>
+                <!-- /.container-fluid -->
